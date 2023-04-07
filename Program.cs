@@ -1,6 +1,7 @@
 using BuildComp___Database.Services;
 using BuildComp___Database.Services.Context;
-using Microsoft.EntityFramworkCore;
+using Microsoft.EntityFrameworkCore;
+
 
 
 
@@ -10,6 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<PasswordService>();
+
+var connectionString = builder.Configuration.GetConnectionString("BuildCompString");
+builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
 
 
 
