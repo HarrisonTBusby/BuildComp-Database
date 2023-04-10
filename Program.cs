@@ -15,6 +15,16 @@ builder.Services.AddScoped<PasswordService>();
 var connectionString = builder.Configuration.GetConnectionString("BuildCompString");
 builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
 
+builder.Services.AddCors(options => {
+    options.AddPolicy("BuildCompPolicy", 
+    builder => {
+        builder.WithOrigins("http://localhost:3000")
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+    });
+});
+
+
 
 
 
@@ -31,6 +41,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("BuildCompPolicy");
 
 
 app.UseAuthorization();
