@@ -1,4 +1,4 @@
-namespace BuildComp___Database.Models.DTO
+namespace BuildComp_Database.Models.DTO
 {
     public class PasswordDTO
     {

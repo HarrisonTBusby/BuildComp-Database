@@ -1,15 +1,14 @@
-using BuildComp___Database.Models;
-using BuildComp___Database.Models.DTO;
-using BuildComp___Database.Services.Context;
+using BuildComp_Database.Models;
+using BuildComp_Database.Models.DTO;
+using BuildComp_Database.Services.Context;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace BuildComp___Database.Services
+namespace BuildComp_Database.Services
 {
     public class UserService : ControllerBase
     {

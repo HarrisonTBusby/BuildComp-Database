@@ -1,4 +1,4 @@
-namespace BuildComp___Database.Models
+namespace BuildComp_Database.Models
 {
     public class UserModel
     {

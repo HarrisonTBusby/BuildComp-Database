@@ -1,4 +1,4 @@
-namespace BuildComp___Database.Services
+namespace BuildComp_Database.Services
 {
     public class PasswordService
     {
