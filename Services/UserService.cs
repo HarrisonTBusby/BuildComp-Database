@@ -17,16 +17,14 @@ namespace BuildComp_Database.Services
         {
             _context = context;
         }
-
-
         public bool DoesUserExist(string? Username)
         {
             return _context.UserInfo.SingleOrDefault(user => user.Username == Username) != null;
-            }
-        
+        }
+
         public bool AddUser(CreateAccountDTO UserToAdd)
         {
-           bool result = false;
+            bool result = false;
             if (!DoesUserExist(UserToAdd.Username))
             {
                 UserModel newUser = new UserModel();
@@ -43,7 +41,7 @@ namespace BuildComp_Database.Services
             }
 
             return result;
-            }
+        }
 
 
         public PasswordDTO HashPassword(string? password)
@@ -65,8 +63,6 @@ namespace BuildComp_Database.Services
             newHashedPassword.Hash = Hash;
 
             return newHashedPassword;
-
-
         }
 
         public bool VerifyUserPassword(string? Password, string? storeHash, string? storeSalt)
@@ -77,8 +73,6 @@ namespace BuildComp_Database.Services
 
             return newHash == storeHash;
         }
-
-
         public IActionResult Login(LoginDTO User)
         {
             IActionResult Result = Unauthorized();
@@ -115,36 +109,35 @@ namespace BuildComp_Database.Services
             return _context.SaveChanges() != 0;
         }
 
-         public bool UpdateUsername(int id, string username){
+        public bool UpdateUsername(int id, string username)
+        {
             UserModel foundUser = GetUserById(id);
             bool result = false;
-            if(foundUser != null){
+            if (foundUser != null)
+            {
                 foundUser.Username = username;
                 _context.Update<UserModel>(foundUser);
                 result = _context.SaveChanges() != 0;
-                }
+            }
             return result;
         }
 
-        public UserModel GetUserById(int id){
+        public UserModel GetUserById(int id)
+        {
             return _context.UserInfo.SingleOrDefault(user => user.Id == id);
         }
 
-         
-         
-         public bool DeleteUser(string userToDelete){
+        public bool DeleteUser(string userToDelete)
+        {
             UserModel foundUser = GetUserByUsername(userToDelete);
             bool result = false;
-            if(foundUser != null){
+            if (foundUser != null)
+            {
                 _context.Remove<UserModel>(foundUser);
                 result = _context.SaveChanges() != 0;
             }
 
             return result;
         }
-
-
-
-
     }
 }

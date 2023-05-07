@@ -71,9 +71,4 @@ public class WebscraperController : ControllerBase
         return _data.AddHardDriveData(data);
     }
 
-
-
-
-
-
 }
