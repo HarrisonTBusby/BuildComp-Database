@@ -15,7 +15,7 @@ builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(conne
 builder.Services.AddCors(options => {
     options.AddPolicy("BuildCompPolicy", 
     builder => {
-        builder.WithOrigins("http://localhost:3000")
+        builder.WithOrigins("http://localhost:3000", "https://buildcomp.azurewebsites.net/")
         .AllowAnyHeader()
         .AllowAnyMethod();
     });

@@ -33,6 +33,10 @@ namespace BuildComp_Database.Services
             return _context.SaveChanges() != 0;
         }
 
+        public IEnumerable<CPUModel> GetAllCpuData(){
+            return _context.CpuInfo;
+        }
+
         public bool AddGpuData(GpuDTO GpuInfo)
         {
             GPUModel GPU = new GPUModel();
@@ -50,6 +54,10 @@ namespace BuildComp_Database.Services
             _context.Add(GPU);
 
             return _context.SaveChanges() != 0;
+        }
+
+        public IEnumerable<GPUModel> GetAllGpuData(){
+            return _context.GpuInfo;
         }
 
         public bool AddMotherboardData(MotherboardDTO MotherboardInfo)
@@ -74,6 +82,10 @@ namespace BuildComp_Database.Services
             return _context.SaveChanges() != 0;
         }
 
+        public IEnumerable<MotherboardModel> GetAllMotherboardData(){
+            return _context.MotherboardInfo;
+        }
+
         public bool AddCaseData(CaseDTO CaseInfo)
         {
             CaseModel Case = new CaseModel();
@@ -84,11 +96,16 @@ namespace BuildComp_Database.Services
             Case.image_url = CaseInfo.image_url;
             Case.item_url = CaseInfo.item_url;
             Case.type = CaseInfo.type;
+            Case.size = CaseInfo.size;
             Case.caseColor = CaseInfo.caseColor;
 
             _context.Add(Case);
 
             return _context.SaveChanges() != 0;
+        }
+
+        public IEnumerable<CaseModel> GetAllCaseData(){
+            return _context.CaseInfo;
         }
 
         public bool AddRamData(RamDTO RamInfo)
@@ -102,13 +119,18 @@ namespace BuildComp_Database.Services
             RAM.item_url = RamInfo.item_url;
             RAM.type = RamInfo.type;
             RAM.color = RamInfo.color;
-            RAM.typeSpeed = RamInfo.typeSpeed;
+            RAM.ramType = RamInfo.ramType;
+            RAM.ramSpeed = RamInfo.ramSpeed;
             RAM.moduleAmount = RamInfo.moduleAmount;
             RAM.firstWordLatency = RamInfo.firstWordLatency;
 
             _context.Add(RAM);
 
             return _context.SaveChanges() != 0;
+        }
+
+        public IEnumerable<RamModel> GetAllRamData(){
+            return _context.RamInfo;
         }
 
         public bool AddPSData(PsDTO PsInfo)
@@ -134,6 +156,10 @@ namespace BuildComp_Database.Services
             return _context.SaveChanges() != 0;
         }
 
+        public IEnumerable<PsModel> GetAllPsData(){
+            return _context.PsInfo;
+        }
+
 
         public bool AddHeatsinkData(HeatsinkDTO HeatsinkInfo)
         {
@@ -156,6 +182,10 @@ namespace BuildComp_Database.Services
             return _context.SaveChanges() != 0;
         }
 
+        public IEnumerable<HeatsinkModel> GetAllHeatsinkData(){
+            return _context.HeatsinkInfo;
+        }
+
          public bool AddHardDriveData(HardDriveDTO HardDriveInfo)
         {
             HardDriveModel HardDrive = new HardDriveModel();
@@ -174,6 +204,10 @@ namespace BuildComp_Database.Services
             _context.Add(HardDrive);
 
             return _context.SaveChanges() != 0;
+        }
+
+        public IEnumerable<HardDriveModel> GetAllHardDriveData(){
+            return _context.HardDriveInfo;
         }
 
 

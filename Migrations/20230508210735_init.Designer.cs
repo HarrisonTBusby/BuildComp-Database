@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BuildComp_Database.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230505224558_init")]
+    [Migration("20230508210735_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -80,6 +80,9 @@ namespace BuildComp_Database.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("price")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("size")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("title")
@@ -153,8 +156,8 @@ namespace BuildComp_Database.Migrations
                     b.Property<string>("price")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double?>("storageCapacity")
-                        .HasColumnType("float");
+                    b.Property<string>("storageCapacity")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("title")
                         .HasColumnType("nvarchar(max)");
@@ -165,6 +168,46 @@ namespace BuildComp_Database.Migrations
                     b.HasKey("id");
 
                     b.ToTable("HardDriveInfo");
+                });
+
+            modelBuilder.Entity("BuildComp_Database.Models.HeatsinkModel", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("color")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double?>("fanNoise")
+                        .HasColumnType("float");
+
+                    b.Property<string>("fanRPM")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("image_url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("isWaterCooled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("item_url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("price")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("HeatsinkInfo");
                 });
 
             modelBuilder.Entity("BuildComp_Database.Models.MotherboardModel", b =>
@@ -291,13 +334,16 @@ namespace BuildComp_Database.Migrations
                     b.Property<string>("price")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ramSpeed")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ramType")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("title")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("type")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("typeSpeed")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");

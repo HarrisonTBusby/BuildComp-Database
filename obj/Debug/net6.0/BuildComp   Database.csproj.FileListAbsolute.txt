@@ -80,3 +80,17 @@ C:\Users\harry\OneDrive\Desktop\BuildComp   Database\obj\Debug\net6.0\refint\Bui
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\obj\Debug\net6.0\BuildComp   Database.pdb
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\obj\Debug\net6.0\BuildComp   Database.genruntimeconfig.cache
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\obj\Debug\net6.0\ref\BuildComp   Database.dll
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\publish\web.config
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\publish\appsettings.Development.json
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\publish\appsettings.json
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\publish\BuildComp   Database.deps.json
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\publish\BuildComp   Database.runtimeconfig.json
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\AngleSharp.dll
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\HtmlAgilityPack.dll
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\WebDriver.dll
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\ICSharpCode.SharpZipLib.dll
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\bin\Debug\net6.0\WebDriverManager.dll

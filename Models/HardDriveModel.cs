@@ -8,7 +8,7 @@ namespace BuildComp_Database.Models
         public string? image_url { get; set; }
         public string? item_url { get; set; }
         public string? type { get; set; }
-        public double? storageCapacity {get; set;}
+        public string? storageCapacity {get; set;}
         public string? PCIeType {get; set; }
         
     }

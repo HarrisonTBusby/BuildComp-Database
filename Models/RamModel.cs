@@ -8,9 +8,10 @@ namespace BuildComp_Database.Models
         public string? image_url { get; set; }
         public string? item_url { get; set; }
         public string? type { get; set; }
-        public string? color {get; set;}
-        public string? typeSpeed {get; set;}
-        public string? moduleAmount {get;set;}
-        public double? firstWordLatency {get; set; }
+        public string? color { get; set; }
+        public string? ramType { get; set; }
+        public string? ramSpeed{ get; set;}
+        public string? moduleAmount { get; set;}
+        public double? firstWordLatency { get; set; }
     }
 }

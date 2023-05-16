@@ -8,6 +8,7 @@ namespace BuildComp_Database.Models
         public string? image_url { get; set; }
         public string? item_url { get; set; }
         public string? type { get; set; }
+        public string? size {get; set; }
         public string? caseColor {get; set; }
         
     }

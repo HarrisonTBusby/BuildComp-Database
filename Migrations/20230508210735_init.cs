@@ -21,6 +21,7 @@ namespace BuildComp_Database.Migrations
                     image_url = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     item_url = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    size = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     caseColor = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -80,12 +81,33 @@ namespace BuildComp_Database.Migrations
                     image_url = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     item_url = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     type = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    storageCapacity = table.Column<double>(type: "float", nullable: true),
+                    storageCapacity = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PCIeType = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_HardDriveInfo", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "HeatsinkInfo",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    title = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    price = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    image_url = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    item_url = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    color = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    fanRPM = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    fanNoise = table.Column<double>(type: "float", nullable: true),
+                    isWaterCooled = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HeatsinkInfo", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -148,7 +170,8 @@ namespace BuildComp_Database.Migrations
                     item_url = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     type = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     color = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    typeSpeed = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ramType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ramSpeed = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     moduleAmount = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     firstWordLatency = table.Column<double>(type: "float", nullable: true)
                 },
@@ -205,6 +228,9 @@ namespace BuildComp_Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "HardDriveInfo");
+
+            migrationBuilder.DropTable(
+                name: "HeatsinkInfo");
 
             migrationBuilder.DropTable(
                 name: "MotherboardInfo");

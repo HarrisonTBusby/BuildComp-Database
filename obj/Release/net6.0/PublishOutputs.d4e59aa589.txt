@@ -1,11 +1,16 @@
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\BuildComp   Database.exe
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\appsettings.Development.json
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\appsettings.json
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\selenium-manager\linux\selenium-manager
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\selenium-manager\macos\selenium-manager
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\selenium-manager\windows\selenium-manager.exe
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\BuildComp   Database.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\BuildComp   Database.runtimeconfig.json
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\BuildComp   Database.pdb
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\AngleSharp.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\Azure.Core.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\Azure.Identity.dll
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\HtmlAgilityPack.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\Microsoft.Data.SqlClient.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\Microsoft.EntityFrameworkCore.dll
@@ -32,6 +37,9 @@ C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\Microsoft.IdentityM
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\Microsoft.OpenApi.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\Microsoft.SqlServer.Server.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\Microsoft.Win32.SystemEvents.dll
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\Newtonsoft.Json.dll
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\WebDriver.dll
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\ICSharpCode.SharpZipLib.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -45,6 +53,7 @@ C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\System.Security.Per
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\System.Text.Encodings.Web.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\System.Text.Json.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\System.Windows.Extensions.dll
+C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\WebDriverManager.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\harry\OneDrive\Desktop\BuildComp   Database\publish\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll

@@ -12,6 +12,7 @@ namespace BuildComp_Database.Services.Context
         public DbSet<MotherboardModel> MotherboardInfo { get; set; }
         public DbSet<CaseModel> CaseInfo {get; set; }
         public DbSet<RamModel> RamInfo {get; set;}
+        public DbSet<HeatsinkModel> HeatsinkInfo {get; set;}
         public DbSet<PsModel> PsInfo {get; set; }
         public DbSet<HardDriveModel> HardDriveInfo {get; set; }
         public DataContext(DbContextOptions options): base(options)
