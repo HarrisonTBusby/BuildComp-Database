@@ -210,6 +210,27 @@ namespace BuildComp_Database.Services
             return _context.HardDriveInfo;
         }
 
+        public bool addWishlistItem(WishlistItemDTO WishlistItemInfo)
+        {
+            WishlistItemModel WishlistItem = new WishlistItemModel();
+
+            WishlistItem.id = WishlistItemInfo.id;
+            WishlistItem.Username = WishlistItemInfo.Username;
+            WishlistItem.title = WishlistItemInfo.title;
+            WishlistItem.price = WishlistItemInfo.price;
+            WishlistItem.image_url = WishlistItemInfo.image_url;
+            WishlistItem.item_url = WishlistItemInfo.item_url;
+            WishlistItem.type = WishlistItemInfo.type;
+
+             _context.Add(WishlistItem);
+
+            return _context.SaveChanges() != 0;
+        }
+
+         public IEnumerable<WishlistItemModel> GetAllWishlistItems(){
+            return _context.WishlistItemInfo;
+        }
+
 
     }
 }

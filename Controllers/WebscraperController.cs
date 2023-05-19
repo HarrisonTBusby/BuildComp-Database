@@ -121,4 +121,16 @@ public class WebscraperController : ControllerBase
         return _data.GetAllHardDriveData();
     }
 
+    [HttpPost("saveItemByUsername")]
+    public bool saveItemByUsername(WishlistItemDTO data)
+    {
+        return _data.addWishlistItem(data);
+    }
+
+    [HttpGet("GetAllWishlistItems")]
+
+    public IEnumerable<WishlistItemModel> GetAllWishlistItems(){
+        return _data.GetAllWishlistItems();
+    }
+
 }
