@@ -133,4 +133,9 @@ public class WebscraperController : ControllerBase
         return _data.GetAllWishlistItems();
     }
 
+    [HttpDelete("DeleteWishlistItems/{Username}/{Title}")]
+    public bool DeleteWishlistItems(string Username, string Title){
+        return _data.DeleteWishlistItems(Username, Title);
+    }
+
 }

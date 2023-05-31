@@ -33,7 +33,8 @@ namespace BuildComp_Database.Services
             return _context.SaveChanges() != 0;
         }
 
-        public IEnumerable<CPUModel> GetAllCpuData(){
+        public IEnumerable<CPUModel> GetAllCpuData()
+        {
             return _context.CpuInfo;
         }
 
@@ -56,7 +57,8 @@ namespace BuildComp_Database.Services
             return _context.SaveChanges() != 0;
         }
 
-        public IEnumerable<GPUModel> GetAllGpuData(){
+        public IEnumerable<GPUModel> GetAllGpuData()
+        {
             return _context.GpuInfo;
         }
 
@@ -82,7 +84,8 @@ namespace BuildComp_Database.Services
             return _context.SaveChanges() != 0;
         }
 
-        public IEnumerable<MotherboardModel> GetAllMotherboardData(){
+        public IEnumerable<MotherboardModel> GetAllMotherboardData()
+        {
             return _context.MotherboardInfo;
         }
 
@@ -104,7 +107,8 @@ namespace BuildComp_Database.Services
             return _context.SaveChanges() != 0;
         }
 
-        public IEnumerable<CaseModel> GetAllCaseData(){
+        public IEnumerable<CaseModel> GetAllCaseData()
+        {
             return _context.CaseInfo;
         }
 
@@ -129,7 +133,8 @@ namespace BuildComp_Database.Services
             return _context.SaveChanges() != 0;
         }
 
-        public IEnumerable<RamModel> GetAllRamData(){
+        public IEnumerable<RamModel> GetAllRamData()
+        {
             return _context.RamInfo;
         }
 
@@ -156,7 +161,8 @@ namespace BuildComp_Database.Services
             return _context.SaveChanges() != 0;
         }
 
-        public IEnumerable<PsModel> GetAllPsData(){
+        public IEnumerable<PsModel> GetAllPsData()
+        {
             return _context.PsInfo;
         }
 
@@ -175,18 +181,19 @@ namespace BuildComp_Database.Services
             Heatsink.fanRPM = HeatsinkInfo.fanRPM;
             Heatsink.fanNoise = HeatsinkInfo.fanNoise;
             Heatsink.isWaterCooled = HeatsinkInfo.isWaterCooled;
-            
+
 
             _context.Add(Heatsink);
 
             return _context.SaveChanges() != 0;
         }
 
-        public IEnumerable<HeatsinkModel> GetAllHeatsinkData(){
+        public IEnumerable<HeatsinkModel> GetAllHeatsinkData()
+        {
             return _context.HeatsinkInfo;
         }
 
-         public bool AddHardDriveData(HardDriveDTO HardDriveInfo)
+        public bool AddHardDriveData(HardDriveDTO HardDriveInfo)
         {
             HardDriveModel HardDrive = new HardDriveModel();
 
@@ -198,20 +205,28 @@ namespace BuildComp_Database.Services
             HardDrive.type = HardDriveInfo.type;
             HardDrive.storageCapacity = HardDriveInfo.storageCapacity;
             HardDrive.PCIeType = HardDriveInfo.PCIeType;
-           
-            
+
+
 
             _context.Add(HardDrive);
 
             return _context.SaveChanges() != 0;
         }
 
-        public IEnumerable<HardDriveModel> GetAllHardDriveData(){
+        public IEnumerable<HardDriveModel> GetAllHardDriveData()
+        {
             return _context.HardDriveInfo;
         }
 
         public bool addWishlistItem(WishlistItemDTO WishlistItemInfo)
         {
+            bool itemExists = _context.WishlistItemInfo.Any(w => w.title == WishlistItemInfo.title && w.Username == WishlistItemInfo.Username);
+
+            if (itemExists)
+            {
+                return false;
+            }
+
             WishlistItemModel WishlistItem = new WishlistItemModel();
 
             WishlistItem.id = WishlistItemInfo.id;
@@ -222,12 +237,31 @@ namespace BuildComp_Database.Services
             WishlistItem.item_url = WishlistItemInfo.item_url;
             WishlistItem.type = WishlistItemInfo.type;
 
-             _context.Add(WishlistItem);
+            _context.Add(WishlistItem);
 
             return _context.SaveChanges() != 0;
         }
 
-         public IEnumerable<WishlistItemModel> GetAllWishlistItems(){
+        public WishlistItemModel GetWishlistItemByUsername(string? Username, string? Title)
+        {
+            return _context.WishlistItemInfo.FirstOrDefault(user => user.Username == Username && user.title == Title);
+        }
+
+        public bool DeleteWishlistItems(string userToDelete, string titleToDelete)
+        {
+            WishlistItemModel foundItem = GetWishlistItemByUsername(userToDelete, titleToDelete);
+            bool result = false;
+            if (foundItem != null)
+            {
+                _context.Remove<WishlistItemModel>(foundItem);
+                result = _context.SaveChanges() != 0;
+            }
+
+            return result;
+        }
+
+        public IEnumerable<WishlistItemModel> GetAllWishlistItems()
+        {
             return _context.WishlistItemInfo;
         }
 
